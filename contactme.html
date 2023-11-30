@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2; 
+}
+
+header {
+            background-color: #fff0f5;
+            color: black;
+            text-align: center;
+            padding: 2px ;
+}
+.contact-container {
+            max-width: 300px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: lavenderblush;
+}
+
+li {
+float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left:16px;
+  padding-right:16px;
+  text-decoration: none;
+}
+li a:hover:not(.active) {
+  background-color: red;
+}
+.active {
+  background-color: lime;
+}
+body {
+            background-image: url('L.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            font-family: 'Arial', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #fff0f5;
+            color: white;
+            text-align: center;
+            padding: 0.0001em 0;
+            margin-left: 300px;
+            margin-right: 300px
+        
+        }
+
+        .logo-img {
+            max-width: 30px;
+            margin-bottom: 5px;
+        }
+
+        .contact-container {
+            font-family: 'Andalus';   
+            font-size: 20px; 
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: pink;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+       .contact-form {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form form {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+h1 {
+  font-family: 'Algerian';   
+  font-size: 25px;    
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0.1 ;
+  font-weight: 95;  
+  color: darkgoldenrod;
+  margin-left: 50px;
+  margin-right: 100px;
+  padding: 5px 0 10px 0;
+  
+}
+
+        .social-link {
+            font-family: 'Andalus';
+            text-decoration: none;
+            color: purple;
+            font-size: 20px;
+            margin: 40 130px;
+ 	     background-color:#fff0f5;
+            padding: 5px;
+            display: flex;
+            text-align:justify;
+            align-items: center;
+            margin-left: 99px;
+            margin-right: 120px;
+            margin-bottom: 10px;
+        }
+
+        .social-link:border {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+
+        input,
+        textarea,
+        button {
+            width: 80%;
+            margin-bottom: 20px;
+            padding: 10px;
+            
+	  
+            
+        }
+	.textarea:border{
+         background-color:white
+      }
+        button {
+            background-color: #fff0f5;
+            color: black;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        
+    </style>
+</head>
+<nav>
+  <ul>
+
+    <li><a href="http://localhost:8080/Minna%20tomcat/personalportfoliowebsite.html">Home</a></li>
+    <li><a href="http://localhost:8080//Minna%20tomcat/about.html">About Me</a></li>
+    <li><a href="http://localhost:8080//Minna%20tomcat/project.html">Project</a></li>
+    <li class='active'><a href="http://localhost:8080/Minna%20tomcat/contactme.html">Contact Me</a></li>
+   
+  </ul>
+<body>
+
+    <header>
+        <div class="logo-container">
+            
+            <h1>"It's a pleasure meeting you! If there's anything specific you're curious about or if you want to know more, I'm all ears."</h1>
+        </div>
+    </header>
+    </br>
+<div class="contact-form">
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <div class="contact-container">
+        <p>Let's connect! Reach out to me on social media:</p>
+
+        <div class="social-links">
+            <a href="https://instagram.com/azmnnawhp?igshid=NGVhN2U2NjQ0Yg==" class="social-link" target="_blank" rel="noopener noreferrer">
+                <img src="tt.png" alt="Instagram Logo" class="logo-img"> Instagram
+            </a>
+            <a href="https://wa.me/182674382" class="social-link" target="_blank" rel="noopener noreferrer">
+                <img src="ws.png" alt="WhatsApp Logo" class="logo-img"> WhatsApp
+            </a>
+            <a href="https://www.facebook.com/hazwazieyhaziq?mibextid=LQQJ4d" class="social-link" target="_blank" rel="noopener noreferrer">
+                <img src="fb.png" alt="Facebook Logo" class="logo-img"> Facebook
+            </a>
+        </div>
+
+</body>
+
+</html>
+

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 0.1em 0;
+        }
+
+        .recipe-container {
+            max-width: 500px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .recipe {
+            margin-bottom: 30px;
+        }
+
+        .recipe img {
+            max-width: 60%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .recipe h2 {
+            color: #4CAF50;
+        }
+
+        .recipe p {
+            color: #333;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 0.0001em 0;
+            position: fixed;
+            bottom: 0.01;
+            width: 100%;
+        }
+
+        form {
+            margin-top: 10px;
+            background-color: #f2f2f2;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        select,
+        button {
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        select {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Recipe App</h1>
+    </header>
+
+    <div class="recipe-container" id="recipeContainer">
+        <!-- Recipes will be dynamically added here -->
+    </div>
+
+    <form id="recipeForm">
+        <h2>Choose a Recipe</h2>
+        <label for="recipeSelect">Select a Recipe:</label>
+        <select id="recipeSelect">
+            <option value="spaghettiBolognese">Spaghetti Bolognese</option>
+            <option value="fruitSmoothie">Fruit Smoothie</option>
+            <option value="chickenCurry">Chicken Curry</option>
+            <option value="vegetableLasagna">Vegetable Lasagna</option>
+            <option value="pizza">Pizza</option>
+            <option value="muffin">Muffin</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <button type="button" onclick="displayRecipe()">Display Recipe</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Recipe App. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function displayRecipe() {
+            var selectedRecipe = document.getElementById("recipeSelect").value;
+            var recipeContainer = document.getElementById("recipeContainer");
+
+            // Clear existing recipes
+            recipeContainer.innerHTML = "";
+
+            // Display the selected recipe
+            if (selectedRecipe === "spaghettiBolognese") {
+                recipeContainer.innerHTML = `
+                    <div class="recipe">
+                        <img src="spg.jpg" alt="Pasta">
+                        <h2>Spaghetti Bolognese</h2>
+                        <p><strong>Ingredients:</strong> Pasta, Ground beef, Onion, Garlic, Tomato sauce, Olive oil, Salt, Pepper, Parmesan cheese</p>
+                        <p><strong>Instructions:</strong> Cook pasta according to package instructions. In a pan, sauté chopped onions and garlic in olive oil. Add ground beef and cook until browned. Pour in tomato sauce and season with salt and pepper. Simmer for 15 minutes. Serve over cooked pasta and top with Parmesan cheese.</p>
+                    </div>
+                `;
+            } else if (selectedRecipe === "fruitSmoothie") {
+                recipeContainer.innerHTML = `
+                    <div class="recipe">
+                        <img src="jus.jpeg" alt="Smoothie">
+                        <h2>Fruit Smoothie</h2>
+                        <p><strong>Ingredients:</strong> Banana, Strawberry, Blueberry, Greek yogurt, Honey, Ice cubes</p>
+                        <p><strong>Instructions:</strong> Blend together banana, strawberry, blueberry, Greek yogurt, honey, and ice cubes until smooth. Pour into a glass and enjoy!</p>
+                    </div>
+                `;
+            } else if (selectedRecipe === "chickenCurry") {
+                recipeContainer.innerHTML = `
+                    <div class="recipe">
+                        <img src="kri.jpg" alt="Chicken Curry">
+                        <h2>Chicken Curry</h2>
+                        <p><strong>Ingredients:</strong> Chicken, Onion, Tomato, Ginger, Garlic, Curry powder, potato, Coconut milk, Salt, Pepper</p>
+                        <p><strong>Instructions:</strong> Sauté chopped onions, ginger, and garlic. Add chicken pieces and cook until browned. Add chopped tomatoes and curry powder. Pour in coconut milk and simmer until chicken is cooked through. Season with salt and pepper. Serve hot.</p>
+                    </div>
+                `;
+            } else if (selectedRecipe === "vegetableLasagna") {
+                recipeContainer.innerHTML = `
+                    <div class="recipe">
+                        <img src="lsg.jpg" alt="Vegetable Lasagna">
+                        <h2>Vegetable Lasagna</h2>
+                        <p><strong>Ingredients:</strong> Lasagna noodles, Ricotta cheese, Spinach, Zucchini, Tomato sauce, Mozzarella cheese, Parmesan cheese, Salt, Pepper</p>
+                        <p><strong>Instructions:</strong> Cook lasagna noodles. In a baking dish, layer noodles with ricotta cheese, sautéed spinach and zucchini, tomato sauce, and mozzarella cheese. Repeat the layers. Top with Parmesan cheese. Bake until bubbly and golden brown. Let it cool before serving.</p>
+                    </div>
+                `;
+            } else if (selectedRecipe === "pizza") {
+                recipeContainer.innerHTML = `
+                    <div class="recipe">
+                        <img src="pzz.jpeg" alt="Pizza">
+                        <h2>Pizza</h2>
+                        <p><strong>Ingredients:</strong> Pizza dough, Tomato sauce, Cheese, Pepperoni, Bell peppers, Mushrooms, Olive oil, Oregano</p>
+                        <p><strong>Instructions:</strong> Roll out pizza dough. Spread tomato sauce and add cheese, pepperoni, bell peppers, and mushrooms. Drizzle with olive oil and sprinkle with oregano. Bake in a preheated oven until crust is golden and cheese is melted.</p>
+                    </div>
+                `;
+            } else if (selectedRecipe === "muffin") {
+                recipeContainer.innerHTML = `
+                    <div class="recipe">
+                        <img src="mff.jpeg" alt="Muffin">
+                        <h2>Muffin</h2>
+                        <p><strong>Ingredients:</strong> Flour, Sugar, Baking powder, Eggs, Milk, Butter, chocolate chips, Vanilla extract</p>
+                        <p><strong>Instructions:</strong> Mix dry ingredients in one bowl and wet ingredients in another. Combine both mixtures until just blended. Spoon into muffin cups. Bake in a preheated oven until a toothpick comes out clean. Let cool before serving.</p>
+                    </div>
+                `;
+            }
+            // Add more conditions for additional recipes as needed
+        }
+    </script>
+
+</body>
+
+</html>
+
